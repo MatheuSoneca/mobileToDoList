@@ -8,7 +8,7 @@ type CustomButtonProps = TouchableOpacityProps & {
 
 export default function CustomButton({title, ...props}: CustomButtonProps) {
     return (
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} {...props}>
             <Text style={styles.buttonText}>{title}</Text>
         </TouchableOpacity>
     );
@@ -16,7 +16,7 @@ export default function CustomButton({title, ...props}: CustomButtonProps) {
 
 export function CustomButton2({title, ...props}: CustomButtonProps) {
     return (
-        <TouchableOpacity style={styles.button2}>
+        <TouchableOpacity style={styles.button2} {...props}>
             <Text style={styles.buttonText}>{title}</Text>
         </TouchableOpacity>
     );

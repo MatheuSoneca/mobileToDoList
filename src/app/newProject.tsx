@@ -3,6 +3,10 @@ import { styles } from './styles';
 import { View, Text, TextInput } from "react-native"
 import { router } from 'expo-router';
 
+const handleGoBack = () => {
+    router.back();
+}
+
 export default function NewProject() {
     return (
         <View style={ styles.main }>
@@ -23,7 +27,7 @@ export default function NewProject() {
             
             <View>
                 <CustomButton title='Salvar'/>
-                <CustomButton2 title='Cancelar' onPress={() => router.back()}/> // O ROUTER BACK ESTA QUEBRADO!!!
+                <CustomButton2 title='Cancelar' onPress={handleGoBack}/> // O ROUTER BACK ESTA QUEBRADO!!!
             </View>
         </View>
     )
